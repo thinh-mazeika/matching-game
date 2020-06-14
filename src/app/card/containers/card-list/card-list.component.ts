@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CardService } from '../../services/card.service';
+import { Observable } from 'rxjs';
+import { Card } from '../../models/card';
 
 @Component({
   selector: 'app-card-list',
@@ -6,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-list.component.css']
 })
 export class CardListComponent implements OnInit {
+  cards$: Observable<Card[]>;
 
-  constructor() { }
+  constructor(private cardService: CardService) { }
 
   ngOnInit(): void {
+    this.cards$ = this.cardService.getCards$();
   }
+
 
 }

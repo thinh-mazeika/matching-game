@@ -1,1 +1,5 @@
-<p>card-list works!</p>
+<div *ngFor="let card of cards$ | async">
+    <div *ngIf="card.isFaceUp">
+        {{ card.symbolCard}}
+    </div>   
+</div>
