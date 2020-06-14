@@ -7,6 +7,9 @@ import { CardComponent } from './components/card/card.component';
   declarations: [CardListComponent, CardComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    CardListComponent
   ]
 })
 export class CardModule { }
