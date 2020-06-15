@@ -46,6 +46,10 @@ export class CardService {
     return this.cardSubject$.asObservable();
   }
 
+  getWonGame$():Observable<Boolean> {
+    return this.isGameWonSubject$.asObservable();
+  }
+
   /*Shuffle cards*/
   private shuffleCards():void {
     this.cards.sort(() => Math.random() - 0.5);
@@ -56,6 +60,7 @@ export class CardService {
     this.generateCards();
     this.shuffleCards();
     this.cardSubject$.next(this.cards);
+
   }
 
   /*Pick Card Logic*/
@@ -66,31 +71,47 @@ export class CardService {
       this.firstCard.isFaceUp = true;
       console.log(this.firstCard);
     }
+    /* If there is no second card and make sure the first card is not picked again*/
     else if (!this.secondCard && card !== this.secondCard) {
       this.secondCard = card;
       this.secondCard.isFaceUp = true;
       console.log(this.secondCard);
+      this.compareCards();
     }
   }
 
   /*Compare cards*/
   compareCards() {
-    if (this.firstCard.symbolCard === this.secondCard.symbolCard) {
+    if (this.firstCard && this.firstCard.symbolCard === this.secondCard.symbolCard) {
       this.firstCard.isFaceUp = true;
       this.firstCard.hasMatch = true;
       this.secondCard.isFaceUp = true;
       this.secondCard.hasMatch = true;
+      this.matchedCardCount += 2;
+      this.clearCards();
+      
     } else {
       setTimeout(() => {
         this.firstCard.isFaceUp = false;
         this.firstCard.hasMatch = false;
         this.secondCard.isFaceUp = false;
         this.secondCard.isFaceUp = false;
+        this.clearCards();
       } , 500)   
     }
   }
 
   /*Clear cards*/
-  
+  clearCards() {
+    this.firstCard = null;
+    this.secondCard = null;
+  }
+
+  didWeWin() {
+    if (this.matchedCardCount === this.cards.length) {
+      this.isGameWonSubject$.next(true);
+      console.log('Did we win?');
+    }
+  }
 
 }
