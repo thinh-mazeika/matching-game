@@ -13,7 +13,7 @@ export class CardService {
   private matchedCardCount = 0;
 
   private cardSubject$ = new BehaviorSubject<Card[]>([]);
-  private isGameWonSubject$ = new BehaviorSubject<Boolean>(false);
+  private isGameWonSubject$ = new BehaviorSubject<boolean>(false);
 
   constructor() { 
     this.newGame();
@@ -46,7 +46,7 @@ export class CardService {
     return this.cardSubject$.asObservable();
   }
 
-  getWonGame$():Observable<Boolean> {
+  getWonGame$():Observable<boolean> {
     return this.isGameWonSubject$.asObservable();
   }
 
@@ -60,7 +60,7 @@ export class CardService {
     this.generateCards();
     this.shuffleCards();
     this.cardSubject$.next(this.cards);
-
+    // this.didWeWin(true);
   }
 
   /*Pick Card Logic*/
@@ -92,8 +92,8 @@ export class CardService {
       this.secondCard.isFaceUp = true;
       this.secondCard.hasMatch = true;
       this.matchedCardCount += 2;
-      this.didWeWin();
       this.clearCards();
+      this.didWeWin(true);
 
     } else {
       setTimeout(() => {
@@ -107,14 +107,14 @@ export class CardService {
   }
 
   /*Clear cards*/
-  clearCards() {
+  clearCards(): void {
     this.firstCard = null;
     this.secondCard = null;
   }
 
-  didWeWin() {
+  didWeWin(newValue): void {
     if (this.matchedCardCount === this.cards.length) {
-      this.isGameWonSubject$.next(true);
+      this.isGameWonSubject$.next(newValue);
     }
   }
 

@@ -1,4 +1,46 @@
 .card-list {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    width: cal(25% -20px);
+}
+
+p {
+    font-size: 35px;
+    color: lightcoral;
+    text-align: center;
+    font-weight: bold;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+    color: darkblue;
+    background-color: lime;
+    line-height: 1.5;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 414px) {
+    p {
+        font-size: 30px;
+    }
+
+    button {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    p, button {
+        font-size: 20px;
+    }
+
+    
 }

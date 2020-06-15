@@ -3,8 +3,8 @@
   }
   
   .scene {
-    width: 100px;
-    height: 150px;
+    width: 465px;
+    height: 180px;
     perspective: 1000px;
   }
   
@@ -17,6 +17,10 @@
     transform-style: preserve-3d;
     transition: transform 0.5s;
   }
+
+  .front {
+    background-color: darkgrey;
+  }
   
   .front, .back {
     position: absolute;
@@ -27,8 +31,54 @@
   
   .back {
     transform: rotateY(180deg);
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
   }
   
   .isFlipped {
     transform: rotateY(180deg);
   }
+
+  .hasMatch {
+    border: 4px solid green;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .scene {
+      width: 235px;
+      height: 250px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .scene {
+      width: 170px;
+      height: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .scene {
+      width: 170px;
+      height: 190px;
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+    .scene {
+      width: 80px;
+      height: 125px;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    .scene {
+      width: 70px;
+      height: 95px;
+    }
+  }
+
+  
