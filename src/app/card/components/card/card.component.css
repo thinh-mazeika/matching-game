@@ -4,7 +4,9 @@
   
   .scene {
     width: 465px;
-    height: 180px;
+    height: 150px;
+    margin-right: 5px;
+    margin-bottom: 5px;
     perspective: 1000px;
   }
   
@@ -56,13 +58,6 @@
   @media only screen and (max-width: 768px) {
     .scene {
       width: 170px;
-      height: 200px;
-    }
-  }
-
-  @media only screen and (max-width: 768px) {
-    .scene {
-      width: 170px;
       height: 190px;
     }
   }
@@ -74,10 +69,26 @@
     }
   }
 
-  @media only screen and (max-width: 320px) {
+  
+  @media only screen and (max-width: 375px) {
     .scene {
       width: 70px;
-      height: 95px;
+      height: 120px;
+    }
+  }
+
+  
+  @media only screen and (max-width: 360px) {
+    .scene {
+      height: 105px;
+    }
+  }
+
+
+  @media only screen and (max-width: 320px) {
+    .scene {
+      width: 65px;
+      height: 90px;
     }
   }
 
