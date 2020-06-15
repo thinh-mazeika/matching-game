@@ -10,15 +10,13 @@ import { Card } from '../../models/card';
 })
 export class CardListComponent implements OnInit {
   cards$: Observable<Card[]>;
-  public result: boolean;
+  won$: Observable<boolean>
 
   constructor(private cardService: CardService) { }
 
   ngOnInit(): void {
     this.cards$ = this.cardService.getCards$();
-    this.cardService.getWonGame$().subscribe((value) => {
-      this.result = value;
-    });
+    this.won$ = this.cardService.getWonGame$();
   }
 
   pickCard(card: Card) {

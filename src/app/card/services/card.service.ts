@@ -60,7 +60,8 @@ export class CardService {
     this.generateCards();
     this.shuffleCards();
     this.cardSubject$.next(this.cards);
-    this.didWeWin(false);
+    this.isGameWonSubject$.next(false);
+    this.matchedCardCount = 0;
   }
 
   /*Pick Card Logic*/
@@ -93,7 +94,7 @@ export class CardService {
       this.secondCard.hasMatch = true;
       this.matchedCardCount += 2;
       this.clearCards();
-      this.didWeWin(true);
+      this.didWeWin();
     } else {
       setTimeout(() => {
         this.firstCard.isFaceUp = false;
@@ -111,9 +112,9 @@ export class CardService {
     this.secondCard = null;
   }
 
-  didWeWin(newValue:boolean): void {
+  didWeWin(): void {
     if (this.matchedCardCount === this.cards.length) {
-      this.isGameWonSubject$.next(newValue);
+      this.isGameWonSubject$.next(true);
     }
   }
 
