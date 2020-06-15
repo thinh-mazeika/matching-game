@@ -3,7 +3,7 @@
         *ngFor="let card of cards$ | async" 
         (onClickCardEvent)="pickCard($event)">
     </app-card>
-    <div *ngIf="result === true">
+    <div *ngIf="result">
         <p>You Won!</p>
         <button (click)="playNewGame()">New Game</button>
     </div>
