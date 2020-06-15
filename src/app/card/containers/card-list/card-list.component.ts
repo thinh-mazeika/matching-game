@@ -10,15 +10,16 @@ import { Card } from '../../models/card';
 })
 export class CardListComponent implements OnInit {
   cards$: Observable<Card[]>;
- 
+
   constructor(private cardService: CardService) { }
 
   ngOnInit(): void {
     this.cards$ = this.cardService.getCards$();
+    this.cardService.didWeWin();
   }
 
-  pickCard(item) {
-    return this.cardService.pickCard(item)
+  pickCard(card: Card) {
+    return this.cardService.pickCard(card)
   }
 
 }

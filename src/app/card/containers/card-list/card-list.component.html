@@ -3,4 +3,8 @@
         *ngFor="let card of cards$ | async" 
         (onClickCardEvent)="pickCard($event)">
     </app-card>
+    <div *ngIf="win$">
+        <p>you Won!</p>
+        <button>New Game</button>
+    </div>
 </div>
