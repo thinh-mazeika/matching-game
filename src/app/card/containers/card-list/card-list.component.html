@@ -1,5 +1,6 @@
-<div *ngFor="let card of cards$ | async">
-    <div *ngIf="card.isFaceUp">
-        {{ card.symbolCard}}
-    </div>   
+<div class="card-list">
+    <app-card [card]="card" 
+        *ngFor="let card of cards$ | async" 
+        (onClickCardEvent)="pickCard($event)">
+    </app-card>
 </div>

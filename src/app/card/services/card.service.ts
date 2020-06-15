@@ -59,9 +59,38 @@ export class CardService {
   }
 
   /*Pick Card Logic*/
-  pickCard() {
+  pickCard(card: Card) {
     /*If first card is not picked, pick a first card then*/
-
+    if (!this.firstCard) {
+      this.firstCard = card;
+      this.firstCard.isFaceUp = true;
+      console.log(this.firstCard);
+    }
+    else if (!this.secondCard && card !== this.secondCard) {
+      this.secondCard = card;
+      this.secondCard.isFaceUp = true;
+      console.log(this.secondCard);
+    }
   }
+
+  /*Compare cards*/
+  compareCards() {
+    if (this.firstCard.symbolCard === this.secondCard.symbolCard) {
+      this.firstCard.isFaceUp = true;
+      this.firstCard.hasMatch = true;
+      this.secondCard.isFaceUp = true;
+      this.secondCard.hasMatch = true;
+    } else {
+      setTimeout(() => {
+        this.firstCard.isFaceUp = false;
+        this.firstCard.hasMatch = false;
+        this.secondCard.isFaceUp = false;
+        this.secondCard.isFaceUp = false;
+      } , 500)   
+    }
+  }
+
+  /*Clear cards*/
+  
 
 }

@@ -1,1 +1,8 @@
-<p>card works!</p>
+<div class="scene">
+    <div class="card" (click)="handleClickedCard()" [ngClass]="{'isFlipped': card.isFaceUp}">
+        <div class="front"></div>
+        <div class="back" *ngIf="card.isFaceUp">
+            {{ card.symbolCard }}
+        </div>
+    </div>
+</div>

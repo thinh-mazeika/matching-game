@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .scene {
+    width: 100px;
+    height: 150px;
+    perspective: 1000px;
+  }
+  
+  .card {
+    border: 1px solid black;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .back {
+    transform: rotateY(180deg);
+  }
+  
+  .isFlipped {
+    transform: rotateY(180deg);
+  }
