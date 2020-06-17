@@ -23,7 +23,7 @@ export class CardListComponent implements OnInit {
     return this.cardService.pickCard(card)
   }
 
-  playNewGame() {
+  playNewGame():void {
     return this.cardService.newGame();
   }
 

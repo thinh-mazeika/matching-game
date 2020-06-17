@@ -19,29 +19,28 @@ export class CardService {
     this.newGame();
   }
 
-  /*Generate 16 cards*/
   private generateCards() {
     this.cards = [
-      new Card('1'),
-      new Card('2'),
-      new Card('3'),
-      new Card('4'),
-      new Card('5'),
-      new Card('6'),
-      new Card('7'),
-      new Card('8'),
-      new Card('1'),
-      new Card('2'),
-      new Card('3'),
-      new Card('4'),
-      new Card('5'),
-      new Card('6'),
-      new Card('7'),
-      new Card('8')
+      new Card('assets/images/airplane.png'),
+      new Card('assets/images/camera.png'),
+      new Card('assets/images/car.png'),
+      new Card('assets/images/dog.png'),
+      new Card('assets/images/glass.png'),
+      new Card('assets/images/heart.png'),
+      new Card('assets/images/leaf.png'),
+      new Card('assets/images/music.png'),
+      new Card('assets/images/airplane.png'),
+      new Card('assets/images/camera.png'),
+      new Card('assets/images/car.png'),
+      new Card('assets/images/dog.png'),
+      new Card('assets/images/glass.png'),
+      new Card('assets/images/heart.png'),
+      new Card('assets/images/leaf.png'),
+      new Card('assets/images/music.png')
     ];
   }
 
-  /*getCard Observerable*/
+  
   getCards$():Observable<Card[]>{
     return this.cardSubject$.asObservable();
   }
@@ -50,12 +49,11 @@ export class CardService {
     return this.isGameWonSubject$.asObservable();
   }
 
-  /*Shuffle cards*/
+
   private shuffleCards():void {
     this.cards.sort(() => Math.random() - 0.5);
   }
 
-  /*NewGame function*/
   newGame() {
     this.generateCards();
     this.shuffleCards();
@@ -64,20 +62,17 @@ export class CardService {
     this.matchedCardCount = 0;
   }
 
-  /*Pick Card Logic*/
   pickCard(pickedCard: Card) {
     const pickedCardDifferentThanFirstCard = pickedCard !== this.firstCard;
     if(pickedCard.hasMatch) {
       return;
     }
 
-    /*If first card is not picked, pick a first card then*/
     if (!this.firstCard) {
       this.firstCard = pickedCard;
       this.firstCard.isFaceUp = true;
     }
 
-    /* If there is no second card and make sure the first card is not picked again*/
     else if (!this.secondCard && pickedCardDifferentThanFirstCard) {
       this.secondCard = pickedCard;
       this.secondCard.isFaceUp = true;
@@ -85,7 +80,6 @@ export class CardService {
     }
   }
 
-  /*Compare cards*/
   compareCards() {
     if (this.firstCard.symbolCard === this.secondCard.symbolCard) {
       this.firstCard.isFaceUp = true;
@@ -106,7 +100,6 @@ export class CardService {
     }
   }
 
-  /*Clear cards*/
   clearCards(): void {
     this.firstCard = null;
     this.secondCard = null;

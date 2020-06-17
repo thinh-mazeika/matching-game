@@ -3,13 +3,21 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 10px;
-    width: cal(25% -20px);
+    max-width: 480px;
+    padding: 10px;
+    background-image: linear-gradient(to right, #3b5002, #fe680b);
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 480px;
 }
 
 p {
-    font-size: 35px;
-    color: lightcoral;
+    font-size: 25px;
+    color: #fe680b;
     text-align: center;
     font-weight: bold;
 }
@@ -17,30 +25,69 @@ p {
 button {
     cursor: pointer;
     outline: none;
-    font-size: 30px;
+    font-size: 25px;
     border: none;
     border-radius: 5px;
-    color: darkblue;
-    background-color: lime;
+    background-color: #eef5fb;
+    color: #276eb9;
     line-height: 1.5;
     align-items: center;
     justify-content: center;
 }
 
-@media only screen and (max-width: 414px) {
-    p {
-        font-size: 30px;
-    }
+button:hover{
+    
+    color: #eef5fb;
+    background-color: #276eb9;
+}
 
-    button {
-        font-size: 25px;
+@media only screen and (max-width: 499px) {
+    .card-list {
+        max-width: 440px;
+    }
+    button, p {
+        font-size: 20px;
     }
 }
 
-@media only screen and (max-width: 320px) {
-    p, button {
-        font-size: 20px;
+@media only screen and (max-width: 459px) {
+    .card-list {
+        max-width: 400px;
     }
+}
 
-    
+@media only screen and (max-width: 420px) {
+    .card-list {
+        max-width: 380px;
+    }
+}
+
+@media only screen and (max-width: 419px) {
+    .card-list {
+        max-width: 360px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .card-list {
+        max-width: 340px;
+    }
+}
+
+@media only screen and (max-width: 379px) {
+    .card-list {
+        max-width: 320px;
+    }
+}
+
+@media only screen and (max-width: 359px) {
+    .card-list {
+        max-width: 300px;
+    }
+}
+
+@media only screen and (max-width: 339px) {
+    .card-list {
+        max-width: 280px;
+    }
 }

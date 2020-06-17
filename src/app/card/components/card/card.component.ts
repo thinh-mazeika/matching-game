@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { Card } from 'src/app/card/models/card';
 import { EventEmitter } from '@angular/core';
 
@@ -7,17 +7,10 @@ import { EventEmitter } from '@angular/core';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
   @Input() card: Card;
-  /*@Output() for sending data to the parent*/
   @Output() onClickCardEvent = new EventEmitter<Card>();
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  /* method for raising an event */
   handleClickedCard() {
     this.onClickCardEvent.emit(this.card);
   }

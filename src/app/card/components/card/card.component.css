@@ -2,26 +2,28 @@
     box-sizing: border-box;
   }
   
+
   .scene {
-    width: 465px;
-    height: 150px;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    width: 100px;
+    height: 120px;
     perspective: 1000px;
+    margin: 10px;
   }
   
   .card {
     border: 1px solid black;
+    box-shadow: 5px 10px 8px #343234;
     cursor: pointer;
     width: 100%;
     height: 100%;
     background-color: pink;
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    user-select: none;
   }
 
   .front {
-    background-color: darkgrey;
+    background-color: #DDFF99;
   }
   
   .front, .back {
@@ -45,51 +47,76 @@
   }
 
   .hasMatch {
-    border: 4px solid green;
+    border: 4px solid #678b04;
   }
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 499px) {
     .scene {
-      width: 235px;
-      height: 250px;
+        width: 90px;
+        height: 90px;
+    }
+
+    image {
+      width: 40px;
+      height: 40px;
+    }
+  }
+ 
+  @media only screen and (max-width: 459px) {
+    .scene {
+        width: 80px;
+        height: 90px;
+    }
+
+    .back image {
+      width: 40px;
+      height: 40px;
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 420px) {
     .scene {
-      width: 170px;
-      height: 190px;
-    }
-  }
-
-  @media only screen and (max-width: 414px) {
-    .scene {
-      width: 80px;
-      height: 125px;
-    }
-  }
-
-  
-  @media only screen and (max-width: 375px) {
-    .scene {
-      width: 70px;
-      height: 120px;
-    }
-  }
-
-  
-  @media only screen and (max-width: 360px) {
-    .scene {
-      height: 105px;
-    }
-  }
-
-
-  @media only screen and (max-width: 320px) {
-    .scene {
-      width: 65px;
-      height: 90px;
+        width: 75px;
+        height: 90px;
     }
   }
 
   
+  @media only screen and (max-width: 419px) {
+    .scene {
+        width: 70px;
+        height: 90px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .scene {
+        width: 65px;
+        height: 90px;
+    }
+  }
+
+  @media only screen and (max-width: 379px) {
+    .scene {
+        width: 60px;
+        height: 90px;
+    }
+    .back image {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 359px) {
+    .scene {
+        width: 55px;
+        height: 90px;
+    }
+  }
+
+  @media only screen and (max-width: 339px) {
+    .scene {
+        width: 50px;
+        height: 90px;
+    }
+  }
