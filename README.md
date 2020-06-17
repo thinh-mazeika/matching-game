@@ -9,7 +9,7 @@ This app was created for the Chingu Voyage 21 pre-work.
 
 * Creates a deck of cards randomly shuffled whenever the new game is played.
 
-* Creates....
+* Creates wining game rule that when all matches are found, the user wins the game.
 
 * Creates rules of playing game including picking only 2 cards per turn, disabling the same card to be clicked twice, adding effects to the matched cards and displaying a message saying "you won!" and a buttton "New Game" to start a new game when user wins the game! 
 
