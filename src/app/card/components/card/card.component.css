@@ -2,10 +2,9 @@
     box-sizing: border-box;
   }
   
-
   .scene {
-    width: 100px;
-    height: 120px;
+    width: 85px;
+    height: 90px;
     perspective: 1000px;
     margin: 10px;
   }
@@ -41,6 +40,11 @@
     display: flex;
     font-weight: bold;
   }
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
   
   .isFlipped {
     transform: rotateY(180deg);
@@ -50,73 +54,68 @@
     border: 4px solid #678b04;
   }
 
-  @media only screen and (max-width: 499px) {
+  @media only screen and (max-width: 768px) {
     .scene {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 85px;
     }
-
-    image {
+    img {
       width: 40px;
       height: 40px;
     }
   }
- 
+
   @media only screen and (max-width: 459px) {
     .scene {
-        width: 80px;
-        height: 90px;
+        width: 75px;
+        height: 80px;
     }
-
-    .back image {
-      width: 40px;
-      height: 40px;
+    img {
+      width: 30px;
+      height: 30px;
     }
   }
 
   @media only screen and (max-width: 420px) {
     .scene {
-        width: 75px;
-        height: 90px;
-    }
-  }
-
-  
-  @media only screen and (max-width: 419px) {
-    .scene {
         width: 70px;
-        height: 90px;
+        height: 75px;
     }
   }
 
   @media only screen and (max-width: 400px) {
     .scene {
-        width: 65px;
-        height: 90px;
+        width: 60px;
+        height: 65px;
     }
   }
 
   @media only screen and (max-width: 379px) {
     .scene {
         width: 60px;
-        height: 90px;
+        height: 65px;
     }
-    .back image {
-      width: 30px;
-      height: 30px;
-    }
+  
   }
 
   @media only screen and (max-width: 359px) {
     .scene {
         width: 55px;
-        height: 90px;
+        height: 60px;
     }
   }
 
   @media only screen and (max-width: 339px) {
     .scene {
         width: 50px;
-        height: 90px;
+        height: 60px;
     }
   }
+
+  @media only screen and (max-width: 320px) {
+    .scene {
+        width: 45px;
+        height: 55px;
+    }
+  }
+

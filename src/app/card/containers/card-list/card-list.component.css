@@ -3,7 +3,9 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    max-width: 480px;
+    max-width: 420px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     padding: 10px;
     background-image: linear-gradient(to right, #3b5002, #fe680b);
 }
@@ -16,7 +18,7 @@
 }
 
 p {
-    font-size: 25px;
+    font-size: 18px;
     color: #fe680b;
     text-align: center;
     font-weight: bold;
@@ -25,28 +27,35 @@ p {
 button {
     cursor: pointer;
     outline: none;
-    font-size: 25px;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     background-color: #eef5fb;
     color: #276eb9;
-    line-height: 1.5;
     align-items: center;
     justify-content: center;
 }
 
 button:hover{
-    
     color: #eef5fb;
     background-color: #276eb9;
 }
 
-@media only screen and (max-width: 499px) {
+@media only screen and (max-width: 768px) {
     .card-list {
-        max-width: 440px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        max-width: 400px;
     }
+
     button, p {
-        font-size: 20px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 473px) {
+    button, p {
+        font-size: 15px;
     }
 }
 
@@ -54,15 +63,12 @@ button:hover{
     .card-list {
         max-width: 400px;
     }
-}
-
-@media only screen and (max-width: 420px) {
-    .card-list {
-        max-width: 380px;
+    button, p {
+        font-size: 18px;
     }
 }
 
-@media only screen and (max-width: 419px) {
+@media only screen and (max-width: 420px) {
     .card-list {
         max-width: 360px;
     }
@@ -70,7 +76,9 @@ button:hover{
 
 @media only screen and (max-width: 400px) {
     .card-list {
-        max-width: 340px;
+        max-width: 320px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 }
 
@@ -89,5 +97,13 @@ button:hover{
 @media only screen and (max-width: 339px) {
     .card-list {
         max-width: 280px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .card-list {
+        max-width: 260px;
+        margin-top: 80px;
+        margin-bottom: 60px;
     }
 }
