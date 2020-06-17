@@ -21,22 +21,22 @@ export class CardService {
 
   private generateCards() {
     this.cards = [
-      new Card('assets/images/airplane.png'),
-      new Card('assets/images/camera.png'),
-      new Card('assets/images/car.png'),
-      new Card('assets/images/dog.png'),
-      new Card('assets/images/glass.png'),
-      new Card('assets/images/heart.png'),
-      new Card('assets/images/leaf.png'),
-      new Card('assets/images/music.png'),
-      new Card('assets/images/airplane.png'),
-      new Card('assets/images/camera.png'),
-      new Card('assets/images/car.png'),
-      new Card('assets/images/dog.png'),
-      new Card('assets/images/glass.png'),
-      new Card('assets/images/heart.png'),
-      new Card('assets/images/leaf.png'),
-      new Card('assets/images/music.png')
+      new Card('assets/images/airplane.jpeg'),
+      new Card('assets/images/camera.jpeg'),
+      new Card('assets/images/car.jpeg'),
+      new Card('assets/images/dog.jpeg'),
+      new Card('assets/images/glass.jpeg'),
+      new Card('assets/images/heart.jpeg'),
+      new Card('assets/images/leaf.jpeg'),
+      new Card('assets/images/music.jpeg'),
+      new Card('assets/images/airplane.jpeg'),
+      new Card('assets/images/camera.jpeg'),
+      new Card('assets/images/car.jpeg'),
+      new Card('assets/images/dog.jpeg'),
+      new Card('assets/images/glass.jpeg'),
+      new Card('assets/images/heart.jpeg'),
+      new Card('assets/images/leaf.jpeg'),
+      new Card('assets/images/music.jpeg')
     ];
   }
 
