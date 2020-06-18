@@ -23,4 +23,4 @@ This app was created for the Chingu Voyage 21 pre-work.
 1. Ensure you have node version 10.16.0 or higher before proceeding.
 2. Download or clone the code from this repository
 3. Change to the root directory and run the script `npm install` to install the depedencies.
-4. Run `npm start` and navigate to http://localhost:4200 in the browser.
+4. Run `ng serve --open` and navigate to http://localhost:4200 in the browser.
