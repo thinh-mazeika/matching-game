@@ -4,7 +4,7 @@
 
 ## **Overview**
 This app was created for the Chingu Voyage 21 pre-work. 
-**LIVE LINK**: [here](https://matching-game-angular.herokuapp.com/)
+**LIVE LINK**: [here](https://matching-game-angular.onrender.com/)
 
 ## **Features**
 * This is a simple game built by Angular framework to test a user's memory by flipping 8 pairs of matched cards.
